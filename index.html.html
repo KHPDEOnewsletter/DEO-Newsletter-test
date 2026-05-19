@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KHP DEO Newsletter | King's Health Partners</title>
+<meta name="description" content="King's Health Partners Diabetes, Endocrinology and Obesity Clinical Academic Partnership Newsletter">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Analytics 4 — replace G-2CPQ5ZL4T3 with your real Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CPQ5ZL4T3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2CPQ5ZL4T3');
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --khp-navy:       #1a2e5a;
+    --khp-blue:       #1e90d4;
+    --khp-blue-dark:  #1570b0;
+    --khp-gold:       #c8962a;
+    --khp-gold-light: #fdf6e8;
+    --khp-teal:       #007b8a;
+    --khp-teal-light: #e0f4f6;
+    --khp-slate:      #3d4f6a;
+    --khp-light:      #f2f5fa;
+    --khp-border:     #dce3ed;
+    --khp-text:       #1e2d42;
+    --khp-muted:      #5a6a80;
+    --font-sans:      'Open Sans', system-ui, sans-serif;
+    --max-width:      780px;
+    --radius:         6px;
+  }
+
+  html { font-size: 16px; }
+  body {
+    font-family: var(--font-sans);
+    background: #e8ecf2;
+    color: var(--khp-text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--khp-blue); text-decoration: underline; }
+  a:hover { color: var(--khp-navy); }
+  a:focus-visible { outline: 3px solid var(--khp-gold); outline-offset: 2px; border-radius: 2px; }
+
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
+  .email-wrapper {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 28px rgba(26,46,90,0.12);
+  }
+
+  /* ── HEADER: full-width image (text is baked into the image) ── */
+  .header-image-full {
+    display: block;
+    width: 100%;
+    line-height: 0;
+  }
+  .header-image-full img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ── ORG BANNER ── */
+  .org-banner {
+    background: var(--khp-navy);
+    padding: 0.55rem 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .org-pill {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.28);
+    color: rgba(255,255,255,0.88);
+    background: rgba(255,255,255,0.10);
+  }
+
+  /* ── INTRO ── */
+  .intro-band {
+    background: var(--khp-teal-light);
+    border-top: 3px solid var(--khp-teal);
+    padding: 1.5rem 2.5rem;
+  }
+  .intro-band p { font-size: 0.92rem; color: var(--khp-slate); line-height: 1.8; }
+  .intro-band p + p { margin-top: 0.65rem; }
+  .intro-band a { color: var(--khp-teal); font-weight: 600; }
+
+  /* ── TABLE OF CONTENTS ── */
+  .toc {
+    background: var(--khp-light);
+    border-bottom: 1px solid var(--khp-border);
+    padding: 1.75rem 2.5rem 2rem;
+  }
+  .toc-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--khp-navy);
+    margin-bottom: 1.3rem;
+  }
+  /* Strict 3-column grid matching the screenshot */
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.3rem;
+    column-gap: 1rem;
+  }
+  .toc-cat {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--khp-gold);
+    margin-bottom: 0.28rem;
+  }
+  .toc-items {
+    font-size: 0.87rem;
+    color: var(--khp-slate);
+    line-height: 1.55;
+  }
+  .toc-items a { color: var(--khp-slate); text-decoration: none; }
+  .toc-items a:hover { color: var(--khp-blue); text-decoration: underline; }
+  .toc-dot { color: var(--khp-gold); margin: 0 2px; }
+
+  /* ── CONTENT ── */
+  .content { padding: 2.5rem; }
+
+  /* ── SECTION HEADERS ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--khp-border);
+  }
+  .section-header:first-child { margin-top: 0; }
+  .section-label {
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--khp-blue);
+    padding: 3px 9px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .section-header h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--khp-navy);
+  }
+
+  /* ── ARTICLES ── */
+  .article {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--khp-border);
+  }
+  .article:last-child { border-bottom: none; margin-bottom: 0; }
+  .article h3 { font-family: var(--font-sans); font-size: 1rem; font-weight: 700; color: var(--khp-navy); line-height: 1.4; margin-bottom: 0.6rem; }
+  .article p { font-size: 0.91rem; color: var(--khp-slate); margin-bottom: 0.6rem; line-height: 1.8; }
+  .article p:last-child { margin-bottom: 0; }
+
+  .read-more {
+    display: block;
+    font-size: 0.83rem; font-weight: 700;
+    color: var(--khp-blue); text-decoration: none; margin-top: 0.75rem; margin-bottom: 0;
+  }
+  .read-more::after { content: ' →'; }
+  .read-more:hover { color: var(--khp-navy); text-decoration: underline; }
+
+  /* ── SPOTLIGHT ── */
+  .spotlight-card {
+    background: var(--khp-light);
+    border-left: 4px solid var(--khp-gold);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1.75rem;
+  }
+  .spotlight-card .byline {
+    font-size: 0.7rem; font-weight: 700; color: var(--khp-gold);
+    text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.4rem;
+  }
+  .spotlight-card h3 { font-size: 0.99rem; font-weight: 700; color: var(--khp-navy); margin-bottom: 0.55rem; }
+  .spotlight-card p { font-size: 0.91rem; color: var(--khp-slate); margin-bottom: 0.55rem; line-height: 1.8; }
+
+  /* ── CALLOUT ── */
+  .callout {
+    background: var(--khp-gold-light); border: 1px solid #e8d09a;
+    border-left: 4px solid var(--khp-gold); border-radius: var(--radius);
+    padding: 0.85rem 1.1rem; margin: 0.7rem 0;
+    font-size: 0.89rem; color: var(--khp-slate);
+  }
+  .callout strong { color: var(--khp-navy); }
+
+  /* ── GRANT TABLE ── */
+  .grant-table-wrap {
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--khp-border); border-radius: var(--radius); margin-top: 0.5rem;
+  }
+  .grant-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; min-width: 600px; table-layout: fixed; }
+  .grant-table th:nth-child(1) { width: 30%; }
+  .grant-table th:nth-child(2) { width: 14%; }
+  .grant-table th:nth-child(3) { width: 14%; }
+  .grant-table th:nth-child(4) { width: 42%; }
+  .grant-table thead tr { background: var(--khp-navy); }
+  .grant-table th { padding: 10px 11px; text-align: left; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.04em; color: #fff; white-space: nowrap; }
+  .grant-table td { padding: 8px 11px; color: var(--khp-slate); border-bottom: 1px solid var(--khp-border); vertical-align: top; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; }
+  .grant-table .deadline { font-weight: 700; color: var(--khp-blue); word-wrap: break-word; overflow-wrap: break-word; white-space: normal; }
+  .grant-table .amount { word-wrap: break-word; overflow-wrap: break-word; white-space: normal; }
+  .grant-table tbody tr:last-child td { border-bottom: none; }
+  .grant-table tbody tr:nth-child(even) { background: var(--khp-light); }
+
+  /* ── YEAR REVIEW GRID ── */
+  .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 1rem; margin-top: 0.75rem; }
+  .review-card { background: var(--khp-light); border-radius: var(--radius); padding: 1.05rem 1.2rem; border-top: 3px solid var(--khp-blue); }
+  .review-card h4 { font-size: 0.73rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--khp-blue); margin-bottom: 0.6rem; }
+  .review-card ul { list-style: none; padding: 0; }
+  .review-card li { font-size: 0.83rem; color: var(--khp-slate); padding: 4px 0 4px 13px; border-bottom: 1px solid var(--khp-border); position: relative; line-height: 1.5; }
+  .review-card li::before { content: '·'; position: absolute; left: 0; color: var(--khp-gold); font-weight: 700; font-size: 1.2rem; line-height: 1.1; }
+  .review-card li:last-child { border-bottom: none; }
+
+  /* ── PUBLICATIONS ── */
+  .publication { font-size: 0.87rem; color: var(--khp-slate); padding: 0.85rem 0; border-bottom: 1px dashed var(--khp-border); line-height: 1.7; }
+  .publication:last-child { border-bottom: none; }
+  .publication a { color: var(--khp-blue); font-weight: 600; text-decoration: underline; }
+  .publication a:hover { color: var(--khp-navy); }
+
+  /* ── EVENT CARD ── */
+  .event-card { background: var(--khp-navy); color: #fff; border-radius: var(--radius); padding: 1.2rem 1.4rem; margin-top: 0.75rem; }
+  .event-card h4 { font-size: 0.99rem; font-weight: 700; color: #fff; margin-bottom: 0.65rem; }
+  .event-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.5rem; margin-bottom: 0.7rem; }
+  .event-meta-label { font-weight: 700; color: var(--khp-gold); font-size: 0.67rem; text-transform: uppercase; letter-spacing: 0.07em; display: block; margin-bottom: 2px; }
+  .event-meta-value { color: rgba(255,255,255,0.9); font-size: 0.84rem; }
+  .event-card p { font-size: 0.86rem; color: rgba(255,255,255,0.82); margin-bottom: 0.5rem; line-height: 1.7; }
+  .event-card a { color: var(--khp-gold); font-weight: 700; font-size: 0.86rem; }
+  .event-card a:hover { color: #fff; }
+
+  /* ── RESOURCE LIST ── */
+  .resource-links { list-style: none; padding: 0; margin-top: 0.5rem; }
+  .resource-links li { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--khp-border); font-size: 0.9rem; }
+  .resource-links li:last-child { border-bottom: none; }
+  .resource-links li::before { content: '↗'; color: var(--khp-blue); font-size: 0.8rem; flex-shrink: 0; }
+
+  /* ── FOOTER ── */
+  .footer { background: var(--khp-navy); padding: 1.75rem 2.5rem; text-align: center; }
+  .footer-tagline { font-style: italic; color: rgba(255,255,255,0.62); font-size: 0.87rem; margin-bottom: 0.9rem; }
+  .footer-links { display: flex; justify-content: center; gap: 1.4rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
+  .footer-links a { color: var(--khp-gold); font-size: 0.82rem; font-weight: 700; text-decoration: none; }
+  .footer-links a:hover { color: #fff; text-decoration: underline; }
+  .footer-contact { font-size: 0.79rem; color: rgba(255,255,255,0.48); }
+  .footer-contact a { color: rgba(255,255,255,0.7); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 620px) {
+    .email-wrapper { margin: 0; border-radius: 0; }
+    .header { grid-template-columns: 1fr; }
+    .header-image { min-height: 160px; max-height: 200px; }
+    .org-banner, .intro-band, .toc, .content, .footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .toc-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 400px) {
+    .toc-grid { grid-template-columns: 1fr; }
+    .header-text h1 { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+<div class="email-wrapper">
+
+  <!-- HEADER -->
+  <header aria-label="Newsletter header">
+    <div class="header-image-full">
+      <!-- Place header-image.png in the same folder as this HTML file -->
+      <img src="header-image.png"
+           alt="Welcome to the latest edition of the King's Health Partners Diabetes, Endocrinology and Obesity newsletter — researcher in laboratory using a pipette"
+           width="780" height="220">
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro-band" aria-label="About KHP DEO">
+    <p><a href="https://www.kingshealthpartners.org/" target="_blank" rel="noopener"><strong>King's Health Partners</strong></a> Diabetes, Endocrinology and Obesity (DEO) Clinical Academic Partnership brings together clinical, operational, and academic teams from across <a href="https://www.guysandstthomas.nhs.uk" target="_blank" rel="noopener">Guy's and St Thomas' NHS Foundation Trust</a>, <a href="https://www.kch.nhs.uk" target="_blank" rel="noopener">King's College Hospital NHS Foundation Trust</a>, <a href="https://www.slam.nhs.uk" target="_blank" rel="noopener">South London and Maudsley NHS Foundation Trust</a>, and <a href="https://www.kcl.ac.uk" target="_blank" rel="noopener">King's College London</a>, working closely with people with lived experience and colleagues from across the South East London Integrated Care System.</p>
+    <p>We work together to improve the health, wellbeing, and outcomes of people living with diabetes, endocrine disorders, and obesity for our local population and beyond. <a href="https://www.kingshealthpartners.org/our-work/clinical-academic-integration/diabetes-endocrinology-and-obesity" target="_blank" rel="noopener">Click here to learn more →</a></p>
+  </section>
+
+  <!-- TABLE OF CONTENTS -->
+  <nav class="toc" aria-label="In this edition">
+    <h2 class="toc-title">In this edition</h2>
+    <div class="toc-grid">
+
+      <div>
+        <span class="toc-cat">Spotlight</span>
+        <div class="toc-items">
+          <a href="#spotlight">Culturally tailored weight management</a>
+          <span class="toc-dot">·</span>
+          <a href="#spotlight">Mothers &amp; diabetes</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="toc-cat">Clinical</span>
+        <div class="toc-items">
+          <a href="#clinical">Hybrid closed-loop</a>
+          <span class="toc-dot">·</span>
+          <a href="#clinical">Weight management SPOA</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="toc-cat">Research</span>
+        <div class="toc-items">
+          <a href="#research">Inclusive research</a>
+          <span class="toc-dot">·</span>
+          <a href="#mammi">Metabolic Associations of Major Mental Illness Workshop</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="toc-cat">Publications</span>
+        <div class="toc-items">
+          <a href="#publications">Recent publications across the partnership</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="toc-cat">Funding</span>
+        <div class="toc-items">
+          <a href="#grants">Grant opportunities</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="toc-cat">News</span>
+        <div class="toc-items">
+          <a href="#news">Research highlights</a>
+          <span class="toc-dot">·</span>
+          <a href="#news">Nutrition resources</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="toc-cat">Events</span>
+        <div class="toc-items">
+          <a href="#events">Upcoming training &amp; events</a>
+        </div>
+      </div>
+
+      <div>
+        <span class="toc-cat">Year Review</span>
+        <div class="toc-items">
+          <a href="#yearreview">DEO's year-end impact summary</a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="content">
+
+    <!-- SPOTLIGHT -->
+    <div class="section-header" id="spotlight">
+      <span class="section-label">Spotlight</span>
+      <h2>Research &amp; Voices</h2>
+    </div>
+
+    <div class="spotlight-card">
+      <div style="display:flex; gap:1.1rem; align-items:flex-start; margin-bottom:0.9rem;">
+        <img src="queen-anoma.png" alt="Queen Anoma, PhD candidate" style="width:90px; height:90px; object-fit:cover; object-position:center top; border-radius:6px; flex-shrink:0;">
+        <div>
+          <p class="byline" style="margin-bottom:0.3rem;">PhD Spotlight</p>
+          <h3 style="margin-bottom:0;">Queen Anoma – Culturally Tailored Weight Management Research</h3>
+        </div>
+      </div>
+      <p><a href="https://kclpure.kcl.ac.uk/portal/en/persons/oluwabukunmi_queen.anoma/" target="_blank" rel="noopener"><strong>Queen Anoma</strong></a> is a PhD candidate whose research focuses on culturally tailored weight management interventions for people of Black heritage in south London. With a background in nursing, she combines clinical experience with public health research to address inequalities in obesity care.</p>
+      <p>Her work explores how culturally adapted digital interventions can improve engagement, retention, and outcomes for individuals living with complex obesity. She has recently completed a systematic review and meta-analysis examining the effectiveness and acceptability of behavioural interventions among ethnic minority populations.</p>
+      <p>The next phase of her research will involve qualitative work and co-design with Black African communities in south London to develop an inclusive, specialist weight management intervention. Alongside her PhD, Queen works as a specialist weight management nurse at Guy's and St Thomas' NHS Foundation Trust, supporting the rollout of GLP-1 therapies and contributing to more inclusive, person-centred care pathways.</p>
+    </div>
+
+    <article class="article">
+      <h3>Mothers and babies at growing risk without better care for type 2 diabetes</h3>
+      <img src="mothers-diabetes.png" alt="Healthcare professional performing a blood glucose test" style="width:100%; height:auto; display:block; margin:0.75rem 0 1rem; border-radius:6px;">
+      <p>Researchers from across the UK and Ireland are calling for urgent action to improve care for women with early-onset type 2 diabetes before, during, and after pregnancy.</p>
+      <p>The call follows a new consensus statement developed by clinicians and researchers, including Sara White from King's College London. Published in <a href="https://onlinelibrary.wiley.com/doi/10.1111/dme.70252" target="_blank" rel="noopener"><em>Diabetic Medicine</em></a>, the statement brings together evidence from three systematic reviews and discussions from the Diabetes UK Annual Professional Conference in 2025, highlighting critical gaps in care and research.</p>
+      <p>The authors emphasise that type 2 diabetes in women of reproductive age is rising, yet evidence to guide care remains limited. Key priorities include improving preconception care, strengthening postnatal follow-up, and addressing inequalities affecting outcomes. The statement calls on funders, policymakers and healthcare leaders to act, warning that without targeted investment, preventable harms to mothers and babies will continue to increase.</p>
+      <a href="https://www.kcl.ac.uk/news/mothers-and-babies-at-growing-risk-without-better-care-for-type-2-diabetes-experts-warn" target="_blank" rel="noopener" class="read-more">Please click here to read more</a>
+    </article>
+
+    <!-- CLINICAL -->
+    <div class="section-header" id="clinical">
+      <span class="section-label">Clinical &amp; Service Innovation</span>
+      <h2>New Models of Care</h2>
+    </div>
+
+    <article class="article">
+      <h3>Hybrid closed-loop systems in people with type 1 diabetes and comorbid mental health conditions</h3>
+      <p>Congratulations to the King's College Hospital NHS FT diabetes team on the publication of their paper in <em>Diabetes, Obesity and Metabolism</em> (January 2026). The study examined clinical outcomes of adults with type 1 diabetes and comorbid depression and/or anxiety disorders using hybrid closed-loop technology.</p>
+      <p>The findings highlight the benefits of a service model incorporating mental health professionals within the multidisciplinary diabetes team, and demonstrate the value of a robust audit culture and contributions of medical students engaged in clinical research activities.</p>
+      <a href="https://doi.org/10.1111/dom.70432" target="_blank" rel="noopener" class="read-more">Please click here to read more</a>
+    </article>
+
+    <article class="article">
+      <h3>A weight management single point of access (SPOA) for South East London</h3>
+      <img src="spoa-workshop.png" alt="Stakeholders at the weight management SPOA workshop, January 2026" style="width:100%; height:auto; display:block; margin:0.75rem 0 1rem; border-radius:6px;">
+      <p>Following the weight management pathway work carried out last year, one of the key recommendations was to implement a SPOA in order to improve and streamline access to weight management services in south east London. <a href="https://www.selondonics.org/wp-content/uploads/Transforming-Adult-Weight-Management-Services-in-South-East-London.-Report-and-Recommendations-July-2025-1.pdf" target="_blank" rel="noopener">Transforming Adult Weight Management Services in South East London — Report and Recommendations (July 2025)</a></p>
+      <p>A working group of stakeholders, which involves partners from across the system and residents with lived experience, has been convened to take this recommendation forward. An initial workshop was held in January 2026, providing an opportunity for stakeholders to review a high-level single-point-of-access pathway, breaking it into sections for small-group discussions.</p>
+      <p>The groups focused on digital functionality, workforce, outcome measures, and ensuring equity across services. Conversations also centred around ensuring mental health was a key element in any assessment/triage process and centring patient choice within decision making.</p>
+      <p>The next stage, working with the working group, is to develop a service specification for a Single Point of Access for weight management services in south east London based on our work to date, and to seek to implement a service.</p>
+      <div class="callout"><strong>Next steps:</strong> Develop a service specification for a Single Point of Access for weight management services in south east London.</div>
+      <a href="https://letstalkhealthandcareselondon.org/adult-weight-management" target="_blank" rel="noopener" class="read-more">Help us improve the adult weight management pathway in south east London | Let's Talk Health and Care South East London</a>
+    </article>
+
+    <!-- RESEARCH -->
+    <div class="section-header" id="research">
+      <span class="section-label">Research &amp; Collaboration</span>
+      <h2>Inclusive Research &amp; Partnerships</h2>
+    </div>
+
+    <article class="article">
+      <h3>Promoting Inclusive Research: KHP DEO × Mabadiliko</h3>
+
+      <div style="margin:0.75rem 0 1rem; overflow:hidden;">
+        <img src="mabadiliko-photos.png" alt="Community co-design workshops with Mabadiliko" style="float:left; width:150px; height:auto; border-radius:6px; margin:0 1.25rem 0.5rem 0;">
+        <p>Inclusive research is central to the DEO Research Framework (2025–2030) and our ambition to deliver equitable health outcomes for diverse populations across south east London.</p>
+        <p style="margin-top:0.6rem;">Last year, we partnered with <a href="https://mabadiliko.org/" target="_blank" rel="noopener">Mabadiliko</a> to undertake community-led insight work with south east London adults. A four-stage co-production approach (literature review, survey, focus groups, and co-design workshop) identified and prioritised high-impact, feasible interventions for implementation within DEO.</p>
+        <p style="margin-top:0.6rem;"><strong>Community-led insight identified three priority needs:</strong></p>
+        <ul style="margin:0.4rem 0 0.75rem 1.25rem; font-size:0.91rem; color:var(--khp-slate); line-height:1.8;">
+          <li>Understanding the unique needs of diverse communities;</li>
+          <li>Making research more accessible and inclusive;</li>
+          <li>Tools and support for meaningful involvement.</li>
+        </ul>
+      </div>
+
+      <p><strong>This co-production work surfaced two priority interventions:</strong></p>
+      <ol style="margin:0.5rem 0 0.75rem 1.25rem; font-size:0.91rem; color:var(--khp-slate); line-height:1.8;">
+        <li>A <strong>Community Engagement Protocol</strong> to standardise equitable engagement across DEO research</li>
+        <li>An <strong>Accessible Research Design Toolkit</strong> to embed inclusion at the proposal and study design stage</li>
+      </ol>
+
+      <p>These insights are now guiding our approach to delivering the inclusion commitment set out in the DEO Research Framework. These tools will be co-designed, tested and refined in partnership with communities and VCSE organisations.</p>
+
+      <a href="https://bit.ly/MabadilikoKingsHealthPartnersDEOReport" target="_blank" rel="noopener" class="read-more">📖 Read the full report here (interactive flipbook)</a>
+
+      <div style="margin-top:1.5rem;">
+        <h4 style="font-size:1rem; font-weight:700; color:var(--khp-navy); margin-bottom:0.75rem;">How We Will Work</h4>
+        <img src="how-we-will-work.png" alt="How We Will Work — five-stage co-design framework: Foundations, Co-Design and Build, Enable and Embed, Embed in Research Systems, Intended Shift" style="width:100%; height:auto; display:block; border-radius:6px; margin-bottom:1rem;">
+        <p>The DEO team is looking to connect with communities and organisations across south east London. We want to understand how communities prefer to work with us in the research space, what support is needed to facilitate greater research participation, and where there are opportunities to strengthen inclusive metabolic research. There is no single way to be involved in this work — we will shape roles around what works for you.</p>
+        <p style="margin-top:0.6rem;">If you would like to join as a lived experience staff member, or if you can connect us with relevant organisations, we would love to hear from you.</p>
+        <div class="callout" style="margin-top:0.75rem;">Email <a href="mailto:DEO@kcl.ac.uk"><strong>DEO@kcl.ac.uk</strong></a> to get involved or to find out more.</div>
+      </div>
+    </article>
+
+
+
+    <article class="article" id="mammi">
+      <h3>Metabolic Associations of Major Mental Illness Workshop</h3>
+      <img src="mammi-workshop.png" alt="Crossing the Divide workshop — Metabolic Health in Major Mental Illness, 18 March 2026" style="width:100%; height:auto; display:block; margin:0.75rem 0 1rem; border-radius:6px;">
+
+      <p>On 18 March 2026, the KHP DEO Programme convened <em>Crossing the Divide: Metabolic Health in Major Mental Illness</em>, marking the first meeting of this Research Focus Area Group.</p>
+      <p>Chaired by Toby Pillinger and Marietta Stadler, the workshop brought together clinicians, researchers, students, funders and industry to examine how metabolic health must be integrated into mental health research and care. Across keynote presentations, research findings and funder discussions, a consistent message emerged: closing the 15–20 year mortality gap in severe mental illness (SMI) requires a step-change in how we conceptualise illness, design services, and deliver interdisciplinary research.</p>
+      <p>The keynote from Dr Shubulade Smith CBE (President of the <a href="https://www.rcpsych.ac.uk" target="_blank" rel="noopener">Royal College of Psychiatrists</a> and Consultant Psychiatrist at South London and Maudsley NHS Foundation Trust) reinforced a critical shift: SMI should be understood as a whole-body condition, with metabolic dysfunction present from early stages and requiring integrated approaches across care, research and commissioning.</p>
+
+      <p><strong>The workshop included:</strong></p>
+      <ul style="margin:0.5rem 0 0.75rem 1.25rem; font-size:0.91rem; color:var(--khp-slate); line-height:1.8;">
+        <li>A keynote address on integrating metabolic and mental health research</li>
+        <li>A funder panel discussion with Breakthrough T1D, Diabetes UK, Bipolar UK and Novo Nordisk</li>
+        <li>Research spotlights spanning early-career to senior researchers, covering:
+          <ul style="margin:0.3rem 0 0.3rem 1.25rem;">
+            <li>Type 1 diabetes technology and mental health — Adam Shooshtarian &amp; Jonathan Croos, King's College London</li>
+            <li>Treatment of binge eating disorder — Dr Aisling McCarthy, University College Dublin</li>
+            <li>Co-produced research priorities for metabolic interventions in SMI — Dr Dina Farran, IoPPN, King's College London</li>
+            <li>A dose–response analysis of GLP-1 receptor agonists and digital tool development — Dr Ellice Caldwell Dunn, IoPPN, King's College London</li>
+          </ul>
+        </li>
+        <li>Informal networking to support new collaborations</li>
+      </ul>
+
+      <p><strong>Key themes from the workshop</strong></p>
+      <p>Across the workshop, several consistent themes emerged shaping future research and practice:</p>
+      <ul style="margin:0.5rem 0 0.75rem 1.25rem; font-size:0.91rem; color:var(--khp-slate); line-height:1.8;">
+        <li>Metabolic health must be embedded as core clinical care, not treated as secondary to mental health;</li>
+        <li>Risk begins early, with metabolic dysfunction present from illness onset;</li>
+        <li>Integrated approaches are required, addressing behavioural, biological and treatment-related drivers together;</li>
+        <li>Inclusive and meaningful PPIE is essential, but must go beyond single engagements using multiple methods, ensuring diversity, and actively reaching underserved populations;</li>
+        <li>The major gap is implementation, not evidence, with existing integrated care models not consistently commissioned or scaled;</li>
+        <li>Emerging therapies (e.g. GLP-1 receptor agonists) present new opportunities but require robust, standardised evaluation.</li>
+      </ul>
+      <p>A further key theme was the need for standardised, meaningful outcome frameworks that capture both mental and physical health, enabling consistency across studies and supporting real-world implementation.</p>
+
+      <p><strong>What makes a strong proposal in this space?</strong></p>
+      <p>Across the funder panel, several consistent signals emerged:</p>
+      <ul style="margin:0.5rem 0 0.75rem 1.25rem; font-size:0.91rem; color:var(--khp-slate); line-height:1.8;">
+        <li>Clear interdisciplinary approaches (psychiatry, metabolic health and population health);</li>
+        <li>Strong, embedded PPIE from the outset, with diverse representation and community engagement;</li>
+        <li>Focus on unmet need and health inequalities;</li>
+        <li>Evidence of implementation potential and real-world impact;</li>
+        <li>Alignment with system priorities (e.g. NHS, policy and global health).</li>
+      </ul>
+      <p>A key challenge highlighted was the difficulty of engaging underserved populations, reinforcing the need for targeted, community-based approaches and long-term partnerships rather than passive recruitment.</p>
+      <p>Funders also emphasised the importance of: cross-checking PPIE insights beyond small groups; using mixed engagement methods (e.g. surveys, repeated engagement); and designing research that can drive measurable service change.</p>
+
+      <p><strong>Workshop Impact</strong></p>
+      <p>The workshop met expectations for 93% of respondents (59% response rate). Participants identified clear actions they intend to take, including:</p>
+      <ul style="margin:0.5rem 0 0.75rem 1.25rem; font-size:0.91rem; color:var(--khp-slate); line-height:1.8;">
+        <li>Applying learning within MDT discussions and clinical practice;</li>
+        <li>Strengthening collaboration between mental and physical health teams;</li>
+        <li>Exploring new research, project, and funding opportunities;</li>
+        <li>Reflecting differently on their clinical roles (e.g., dietetics, metabolic care);</li>
+        <li>Raising awareness of DEO work and considering service developments (e.g. metabolic clinics).</li>
+      </ul>
+
+      <div class="callout">
+        <strong>A field ready for change.</strong> The link between metabolic and mental health is no longer conceptual — it is a clinical and research priority. For clinicians, this means embedding metabolic care into routine mental health practice. For researchers, it requires designing studies that are interdisciplinary, inclusive and implementation-focused. For students, it signals a future where cross-disciplinary thinking is essential. For funders, it means prioritising proposals that demonstrate real-world impact, tackle inequalities and support scalable system change.
+      </div>
+
+    </article>
+
+    <!-- PUBLICATIONS -->
+    <div class="section-header" id="publications">
+      <span class="section-label">Publications</span>
+      <h2>Recent Publications Across the Partnership</h2>
+    </div>
+
+    <div role="list" aria-label="Recent publications">
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1210/jendso/bvag008" target="_blank" rel="noopener">Effect of vosoritide on spine morphology in children with achondroplasia: 1-year results from a randomized phase 2 study.</a> Irving M, Savarirayan R, Hoover-Fong JE, Dee A, Mukherjee S, Rivat C, Sabir I, White KK. <em>Journal of the Endocrine Society.</em> 2026 Mar. doi: 10.1210/jendso/bvag008.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1111/dom.70432" target="_blank" rel="noopener">Clinical outcomes of adults with type 1 diabetes and comorbid depression and/or anxiety disorders using hybrid closed-loop: A retrospective study from a multidisciplinary tertiary centre.</a> Croos J, Shooshtarian AK, Stotesbury B, Gallen G, Ismail K, Rosenthal M, Cheah Y, Calcia M, Lovie K, Ahuja A, Shrestha A, Tan RJL, Stadler M. <em>Diabetes, Obesity and Metabolism.</em> 2026 Mar;28(3):2362&ndash;2373. doi: 10.1111/dom.70432. PMID: 41558977.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1111/dme.70194" target="_blank" rel="noopener">Associations between impaired awareness of hypoglycaemia and mental health in insulin-treated type 2 and type 1 diabetes in the Hypo-METRICS study.</a> McCarthy A, Thomas J, Avila E, Koutroukas V, Pieri B, Zaremba N, Amiel SA, Pouwer F, Choudhary P, Divilly P. <em>Diabetic Medicine.</em> 2026 Mar. doi: 10.1111/dme.70194. PMID: 41578685.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1002/edm2.70190" target="_blank" rel="noopener">Understanding medication adherence and glycaemic level in people with type 2 diabetes across countries: A cross-sectional and longitudinal analysis of medication beliefs, illness perceptions, resistance to illness and mood.</a> Teo V, Weinman J, Yap KZ, Lopez SE, Hodgkinson A, Chamley M. <em>Endocrinology, Diabetes and Metabolism.</em> 2026 Mar;9(2). doi: 10.1002/edm2.70190.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.2337/dc25-2242" target="_blank" rel="noopener">Interoceptive Awareness Moderates the Relationship Between Hypoglycemia Exposure and Symptom Recognition in Adults With Type 1 Diabetes.</a> Matus AM, Agni A, Amiel SA, Riegel B, Shaw JA, Speight J, Rickels MR, Lin YK. <em>Diabetes Care.</em> 2026 Mar;49(3):435&ndash;443. doi: 10.2337/dc25-2242. PMID: 41467850.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1007/s00125-025-06601-5" target="_blank" rel="noopener">Artificial intelligence-driven clinical decision support systems to assist healthcare professionals and people with diabetes in Europe at the point of care: a Delphi-based consensus roadmap.</a> Bajramagic M, Battelino T, Cos X, Cote M, Cui N, Forbes A, Galderisi A, Heinemann L, Hussain S, Imbert J, Holm J&ouml;nsson C, Joubert M, Lali&#263; NM, Phillip M, Schwarz P, Torbeyns B, Wake DJ, Zakrzewska K, Del Prato S. <em>Diabetologia.</em> 2026 Feb;69(2):259&ndash;273. doi: 10.1007/s00125-025-06601-5. PMID: 41247494.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1111/dme.70183" target="_blank" rel="noopener">Associations of modifiable preconception, pregnancy and postpartum factors with health outcomes for women with type 2 diabetes and their children: A systematic review and meta-analysis of observational studies.</a> Schoenaker D, Dyer E, Heslehurst N, Kent G, Gunabalasingam S, Hopkins L, Kyrka A, Lebrett R, Flynn AC, White SL, Meek CL, Forde R. <em>Diabetic Medicine.</em> 2026 Feb. doi: 10.1111/dme.70183. PMID: 41354939.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1111/dme.70181" target="_blank" rel="noopener">Barriers and facilitators to oral healthcare support in gestational diabetes mellitus: An interview study with healthcare professionals.</a> Kristensen CB, Asimakopoulou K, Ide M, Forbes A. <em>Diabetic Medicine.</em> 2026 Feb. doi: 10.1111/dme.70181. PMID: 41354644.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1093/jbmr/zjaf177" target="_blank" rel="noopener">ASBMR President&#39;s Editorial on the occasion of the 40th anniversary of JBMR.</a> Duncan EL. <em>Journal of Bone and Mineral Research.</em> 2026 Jan;41(1):3&ndash;4. doi: 10.1093/jbmr/zjaf177. PMID: 41486607.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1111/dme.70175" target="_blank" rel="noopener">Incidence and risk factors for chronic kidney disease in individuals with type 1 diabetes: A population-based study in Salford, Manchester.</a> Habte-Asres HH, Stedman M, Forbes A, Karalliedde J, Wheeler DC, Heald AH. <em>Diabetic Medicine.</em> 2026 Jan. doi: 10.1111/dme.70175. PMID: 41267358.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1111/dom.70480" target="_blank" rel="noopener">Discordant real-world glycaemic outcomes with Omnipod&#8482; 5 and MiniMed&#8482; 780G in adults with type 1 diabetes: Why validated measures matter.</a> Pavlou P, Anandhakrishnan A, Athanasiadou KI, Brackenridge A, Liu YF, Kariyawasam D, Johnston T, Atkinson R, Hyslop R, Pender S, Karalliedde J, Hussain S. <em>Diabetes, Obesity and Metabolism.</em> 2026 Jan. doi: 10.1111/dom.70480.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1111/jdi.70251" target="_blank" rel="noopener">Diagnostic differences in glycemic markers for detecting impaired glucose tolerance in Black African and White European men in the United Kingdom: The SOUL-DEEP cross-sectional study.</a> Goff LM, Whelehan G, Bello T, Ghafar A, Ladwa M, Bodicoat DH, Stanners M, Amiel SA. <em>Journal of Diabetes Investigation.</em> 2026 Jan. doi: 10.1111/jdi.70251.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1111/dme.70257" target="_blank" rel="noopener">A mobile phone application for the prevention of type 2 diabetes in Malaysian women with gestational diabetes mellitus (MYGODDESS): A feasibility randomised controlled trial.</a> Benton M, Goldsmith K, Ching SM, Forbes A, Nadal IP, Murphy HR, Sobri NHM, Yusof BNM, Basri NI, Ismail IZ, Ismail K, Chew BH. <em>Diabetic Medicine.</em> 2026 Jan. doi: 10.1111/dme.70257.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1080/17446651.2026.2619097" target="_blank" rel="noopener">Dialysis meets devices: the use of automated insulin delivery in end stage kidney disease and haemodialysis.</a> Pavlou P, Leelarathna L, Avari P, Hussain S, Johnston T, Hyslop R, Pender S, Karalliedde J. <em>Expert Review of Endocrinology and Metabolism.</em> 2026 Jan;21(2):111&ndash;121. doi: 10.1080/17446651.2026.2619097. PMID: 41622859.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1111/dom.70575" target="_blank" rel="noopener">A retrospective observational study evaluating the safety and effectiveness of commercially available automated insulin delivery systems in people with type 1 diabetes and gastroparesis.</a> Tan RJL, Ahuja A, Shrestha A, Gallen G, Stotesbury B, Cheah Y, Mustafa OG, Whyte MB, Croos J, Shooshtarian A, Hayee BH, Stadler M. <em>Diabetes, Obesity and Metabolism.</em> 2026 Jan. doi: 10.1111/dom.70575. PMID: 41713943.
+      </div>
+
+      <div class="publication" role="listitem">
+        <a href="https://doi.org/10.1007/s00125-026-06681-x" target="_blank" rel="noopener">Type 1 diabetes, ageing and frailty: an underexplored intersection.</a> Maltese G, Karalliedde J, Dhesi J, Bellary S. <em>Diabetologia.</em> 2026 Jan. doi: 10.1007/s00125-026-06681-x. PMID: 41701264.
+      </div>
+
+    </div>
+        <!-- GRANTS -->
+    <div class="section-header" id="grants">
+      <span class="section-label">Funding</span>
+      <h2>Grant Opportunities</h2>
+    </div>
+
+    <p style="font-size:0.86rem;color:var(--khp-muted);margin-bottom:0.75rem;">Upcoming deadlines relevant to the DEO partnership. Scroll horizontally on smaller screens.</p>
+    <div class="grant-table-wrap">
+      <table class="grant-table" aria-label="Grant opportunities with deadlines">
+        <thead>
+          <tr>
+            <th scope="col">Grant</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Deadline</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/programme-development-grants-march-2026/2026372-2026373-2026374-2026375" target="_blank" rel="noopener">NIHR – Programme Development Grants (March 2026)</a></td><td class="amount">Up to £250k</td><td class="deadline">20 May 2026</td><td>Funds up to 24 months of preparatory work to develop or strengthen a future NIHR Programme Grant for Applied Research application.</td></tr>
+          <tr><td><a href="https://www.ukri.org/opportunity/diet-and-health-collaborative-research-and-development-grants/" target="_blank" rel="noopener">BBSRC/Defra – Diet and Health Collaborative R&amp;D Grants</a></td><td class="amount">Up to £800k</td><td class="deadline">27 May 2026</td><td>Collaborative R&amp;D grants for research on healthy, sustainable and resilient diets — strong fit for obesity, nutrition and prevention work within DEO.</td></tr>
+          <tr><td><a href="https://www.ese-hormones.org/what-we-do/grants-endorsements/meeting-grants/" target="_blank" rel="noopener">Society for Endocrinology – GRC Travel Grant</a></td><td class="amount">Up to €400</td><td class="deadline">31 May 2026</td><td>Travel bursary of up to €400 to support attendance at the Gordon Research Conference on Endocrine Disruptors.</td></tr>
+          <tr><td><a href="https://www.obesity.org/grants/" target="_blank" rel="noopener">The Obesity Society – Research Grants</a></td><td class="amount">Not specified</td><td class="deadline">1 Jun 2026</td><td>Annual research grants supporting investigator-initiated studies across obesity science, policy, prevention and treatment.</td></tr>
+          <tr><td><a href="https://www.diabetes.org.uk/our-research/for-researchers/applying-for-funding/funding-schemes/project-grants" target="_blank" rel="noopener">Diabetes UK – Pre-Pregnancy Gestational Diabetes</a></td><td class="amount">Up to £500k / 5 years</td><td class="deadline">1 Jun 2026</td><td>Project grants up to £500k over 5 years focused on improving care and outcomes for women with pre-pregnancy or gestational diabetes.</td></tr>
+          <tr><td><a href="https://www.diabetes.org.uk/our-research/for-researchers/applying-for-funding/funding-schemes/project-grants" target="_blank" rel="noopener">Diabetes UK – Diabetes Technology During Hospital Pathway</a></td><td class="amount">Up to £500k / 5 years</td><td class="deadline">1 Jun 2026</td><td>Project grants up to £500k over 5 years for research using diabetes technology to improve care and outcomes during hospital admissions.</td></tr>
+          <tr><td><a href="https://novonordiskfonden.dk/en/grant/non-diabetic-endocrinology-collaborative-project-grants/" target="_blank" rel="noopener">Novo Nordisk Foundation – Non-Diabetic Endocrinology Collaborative Project Grants</a></td><td class="amount">Up to DKK 10M</td><td class="deadline">3 Jun 2026</td><td>Collaborative grants up to DKK 10M for research in non-diabetic endocrinology across European institutions.</td></tr>
+          <tr><td><a href="https://rosetrees.org.uk/next/" target="_blank" rel="noopener">Rosetrees Trust – NEXT Award 2026</a></td><td class="amount">Not specified</td><td class="deadline">8 Jun 2026</td><td>Up to £450k over 3 years (with potential for 2 further years) for a single outstanding researcher pursuing high-risk, high-reward translational research with clear patient benefit.</td></tr>
+          <tr><td><a href="https://acmedsci.ac.uk/grants-and-schemes/grant-schemes/academy-of-medical-sciences-professorship-scheme" target="_blank" rel="noopener">Academy of Medical Sciences – Professorship Scheme</a></td><td class="amount">Up to £500k</td><td class="deadline">10 Jun 2026</td><td>Up to £500k to support biomedical and health researchers who are newly appointed or moving to a professorship at a UK institution.</td></tr>
+          <tr><td><a href="https://www.ukri.org/opportunity/frontier-artificial-intelligence-discovery/" target="_blank" rel="noopener">Innovate UK – Frontier AI Discovery</a></td><td class="amount">£25k–£50k</td><td class="deadline">10 Jun 2026</td><td>Grants of £25k–£50k for early-stage AI innovation — possible fit for predictive analytics, digital tools or AI-enabled metabolic health research.</td></tr>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/postdoctoral-award-cohort-3/2026427" target="_blank" rel="noopener">NIHR – Postdoctoral Award Cohort 3</a></td><td class="amount">See link</td><td class="deadline">16 Jun 2026</td><td>Salaried postdoctoral award providing 2–5 years of protected research time and a bespoke training programme to support career independence.</td></tr>
+          <tr><td><a href="https://netrf.org/for-researchers/about/funding-for-researchers/apply-for-research-grants/funding-schedule/" target="_blank" rel="noopener">NETRF – Accelerator / Investigator / Pilot / Mentored Awards</a></td><td class="amount">$100k–$800k</td><td class="deadline">22 Jun 2026 (invited full applications only)</td><td>Funding of $100k–$800k for neuroendocrine tumour research — relevant to endocrine tumour priorities; invited full applications only.</td></tr>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/doctoral-award-cohort-3/2026426" target="_blank" rel="noopener">NIHR – Doctoral Award Cohort 3</a></td><td class="amount">Comprehensive funding</td><td class="deadline">23 Jun 2026</td><td>Comprehensive NIHR-funded 3-year PhD covering salary, research costs and training — supports the next generation of applied health researchers.</td></tr>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/global-advanced-fellowships-cohort-2/2026297" target="_blank" rel="noopener">NIHR – Global Advanced Fellowships Cohort 2</a></td><td class="amount">Up to £750k</td><td class="deadline">30 Jun 2026</td><td>Postdoctoral fellowship up to £750k for early- to mid-career researchers working on global health challenges with international collaboration.</td></tr>
+          <tr><td><a href="https://www.ukri.org/opportunity/developmental-pathway-funding-scheme/" target="_blank" rel="noopener">MRC – Developmental Pathway Funding Scheme Stage 2</a></td><td class="amount">£400k–£2M</td><td class="deadline">8 Jul 2026</td><td>Funds £400k–£2M for translational development of medical products, interventions, diagnostics, devices or therapeutics toward clinical use.</td></tr>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/research-patient-benefit-march-2026/2026352-2026353-2026354" target="_blank" rel="noopener">NIHR – Research for Patient Benefit: March 2026</a></td><td class="amount">Up to £500k + up to £10k for inclusive research</td><td class="deadline">8 Jul 2026</td><td>Researcher-led applied health and care research up to £500k (plus up to £10k for inclusive research activities) with clear benefit to NHS patients.</td></tr>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/population-health-career-scientist-award-round-6/2026416" target="_blank" rel="noopener">NIHR – Population Health Career Scientist Award</a></td><td class="amount">See link</td><td class="deadline">9 Jul 2026</td><td>Supports senior researchers transitioning to Reader or Professor level to build sustained independent research careers in population health.</td></tr>
+          <tr><td><a href="https://wellcome.org/research-funding/schemes/wellcome-early-career-awards" target="_blank" rel="noopener">Wellcome Early-Career Awards</a></td><td class="amount">Salary + up to £400k</td><td class="deadline">21 Jul 2026</td><td>Provides salary plus up to £400k for research expenses over 5 years to help early-career researchers develop an independent research identity.</td></tr>
+          <tr><td><a href="https://wellcome.org/grant-funding/schemes/mental-health-award-using-physical-activity-circadian-based-interventions" target="_blank" rel="noopener">Wellcome – Mental Health Award: Physical activity &amp; circadian-based interventions (youth)</a></td><td class="amount">£1–4M</td><td class="deadline">14 Jul 2026</td><td>One-off award of £1–4M targeting youth anxiety and depression through physical activity and circadian rhythm-based interventions.</td></tr>
+          <tr><td><a href="https://www.diabetes.org.uk/our-research/for-researchers/applying-for-funding/funding-schemes/early-career-small-grants" target="_blank" rel="noopener">Diabetes UK – Early-Career Small Grants</a></td><td class="amount">Up to £15,000</td><td class="deadline">4 Aug 2026</td><td>Up to £15,000 for early-career diabetes researchers to run small pilot projects and generate preliminary data.</td></tr>
+          <tr><td><a href="https://www.diabetes.org.uk/our-research/for-researchers/applying-for-funding/funding-schemes/phd-studentships" target="_blank" rel="noopener">Diabetes UK – PhD Studentships</a></td><td class="amount">Stipend, home fees &amp; research allowance</td><td class="deadline">4 Aug 2026</td><td>Fully funded 3-year PhD studentships covering stipend, home fees and research allowance to grow diabetes research capacity in the UK.</td></tr>
+          <tr><td><a href="https://www.bhf.org.uk/for-professionals/information-for-researchers/what-we-fund/translational-grant" target="_blank" rel="noopener">BHF – Translational Awards</a></td><td class="amount">No fixed maximum</td><td class="deadline">5 Aug 2026</td><td>Funds translational cardiovascular research at any scale — including diagnostics, devices, digital solutions, therapeutics and early-phase clinical studies.</td></tr>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/active-travel-facilitators-and-barriers-within-different-populations/2026377" target="_blank" rel="noopener">NIHR – Active Travel: Facilitators &amp; Barriers</a></td><td class="amount">Programme funding</td><td class="deadline">18 Aug 2026</td><td>Public health research programme investigating the health impacts of active travel interventions such as walking and cycling infrastructure.</td></tr>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/hta-researcher-led-primary-research/2026420" target="_blank" rel="noopener">NIHR – HTA Researcher-led Primary Research</a></td><td class="amount">See link</td><td class="deadline">See link</td><td>Funds researcher-led primary research studies evaluated through the Health Technology Assessment programme.</td></tr>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/nihr-james-lind-alliance-priority-setting-partnerships-rolling-funding-opportunity/2026422" target="_blank" rel="noopener">NIHR – James Lind Alliance Priority Setting Partnerships</a></td><td class="amount">See link</td><td class="deadline">Rolling</td><td>Rolling funding for Priority Setting Partnerships bringing patients, carers and clinicians together to identify and agree top research priorities.</td></tr>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/nihr-nice-rolling-funding-opportunity/2026421" target="_blank" rel="noopener">NIHR – NICE Rolling Funding Opportunity</a></td><td class="amount">See link</td><td class="deadline">Rolling</td><td>Rolling funding opportunity supporting research that informs NICE guidelines and health technology assessments.</td></tr>
+          <tr><td><a href="https://www.nihr.ac.uk/funding/prp-44-05-neighbourhood-multidisciplinary-teams-children-and-young-people/2026392" target="_blank" rel="noopener">NIHR – PRP (44-05) Neighbourhood Multidisciplinary Teams for Children and Young People</a></td><td class="amount">See link</td><td class="deadline">See link</td><td>Policy Research Programme call examining neighbourhood multidisciplinary team models for improving outcomes for children and young people.</td></tr>
+          <tr><td><a href="https://www.bhf.org.uk/for-professionals/information-for-researchers/what-we-fund/translational-grant" target="_blank" rel="noopener">BHF – Clinical Study Grants</a></td><td class="amount">Usually &gt;£500k direct costs</td><td class="deadline">27 Aug 2026</td><td>Supports large-scale clinical trials or major observational studies addressing cardiovascular disease — typically over £500k direct costs.</td></tr>
+          <tr><td><a href="https://wellcome.org/research-funding/schemes/wellcome-discovery-awards" target="_blank" rel="noopener">Wellcome Discovery Awards (2026 Round)</a></td><td class="amount">Avg. £3.5M</td><td class="deadline">22 Sept 2026</td><td>Average award of £3.5M for large-scale, long-term discovery research programmes with potential for transformative impact on human health.</td></tr>
+          <tr><td><a href="https://www.psychiatryresearchtrust.org/" target="_blank" rel="noopener">Psychiatry Research Trust – Larger Grants</a></td><td class="amount">Up to £100k</td><td class="deadline">30 Sept 2026</td><td>Grants up to £100k for psychiatry and mental health research — strong fit for metabolic psychiatry, severe mental illness, eating disorders and diabetes.</td></tr>
+          <tr><td><a href="https://www.diabetes.org.uk/our-research/for-researchers/applying-for-funding/funding-schemes/rdl" target="_blank" rel="noopener">Diabetes UK – RD Lawrence Fellowship</a></td><td class="amount">Up to £525k</td><td class="deadline">1 Oct 2026 (prelim); 30 Oct 2026 (full)</td><td>Career development fellowship up to £525k over 4–5 years for postdoctoral researchers with 3–10 years&#39; experience establishing independence in diabetes research.</td></tr>
+          <tr><td><a href="https://www.ese-hormones.org/what-we-do/grants-endorsements/meeting-grants/" target="_blank" rel="noopener">Society for Endocrinology – Travel Grant</a></td><td class="amount">Up to €400</td><td class="deadline">8 Oct 2026</td><td>Travel bursary up to €400 to support attendance at Society for Endocrinology-approved conferences and training events.</td></tr>
+          <tr><td><a href="https://www.ukri.org/opportunity/developmental-pathway-funding-scheme/" target="_blank" rel="noopener">MRC – Developmental Pathway Funding Scheme Stage 1</a></td><td class="amount">See link</td><td class="deadline">18 Nov 2026</td><td>Stage 1 of the MRC DPFS — supports early translational development work for medical products, interventions, diagnostics or therapeutic pathways.</td></tr>
+          <tr><td><a href="https://www.cdrf.org.uk/grant-applications" target="_blank" rel="noopener">CDRF / Denise Coates Foundation – Microbiome Research Fellowship</a></td><td class="amount">Up to £350k</td><td class="deadline">See website</td><td>Fellowship up to £350k supporting research in microbiome, metabolomics and chronic disease, with priority for projects using twin cohort data.</td></tr>
+          <tr><td><a href="https://www.cdrf.org.uk/grant-applications" target="_blank" rel="noopener">CDRF / Denise Coates Foundation – Microbiome Pilot Studies</a></td><td class="amount">Up to £10k</td><td class="deadline">Rolling</td><td>Rolling pilot grants up to £10k to generate preliminary data supporting future larger applications in microbiome and chronic disease research.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+        <!-- NEWS -->
+    <div class="section-header" id="news">
+      <span class="section-label">News &amp; Updates</span>
+      <h2>Research Highlights &amp; Resources</h2>
+    </div>
+
+    <article class="article">
+      <h3>Research shows lifestyle interventions in pregnancy reduce gestational diabetes risk</h3>
+      <p>A collaboration between King's College London and Liverpool shows that lifestyle interventions during pregnancy — including diet and physical activity — can reduce the risk of gestational diabetes, highlighting the importance of early prevention and structured support.</p>
+      <a href="https://www.kcl.ac.uk/news/lifestyle-interventions-in-pregnancy-reduce-gestational-diabetes-risk" target="_blank" rel="noopener" class="read-more">Please click here to read more</a>
+    </article>
+
+    <article class="article">
+      <h3>Research reveals hidden diversity of E. coli driving diabetic foot infections</h3>
+      <p>Researchers from King's College London have uncovered previously unrecognised diversity in E. coli strains linked to diabetic foot infections, highlighting the complexity of these infections and the need for more targeted approaches to diagnosis and treatment.</p>
+      <a href="https://www.kcl.ac.uk/news/hidden-diversity-of-e-coli-driving-diabetic-foot-infections" target="_blank" rel="noopener" class="read-more">Please click here to read more</a>
+    </article>
+
+    <article class="article">
+      <h3>One in three diagnosed with pre-diabetes or diabetes during dental appointment</h3>
+      <p>Research involving King's College London found that one in three people attending routine dental appointments were identified as having pre-diabetes or diabetes, demonstrating the potential for dental settings to support early detection.</p>
+      <a href="https://www.kcl.ac.uk/news/one-in-three-diagnosed-with-pre-diabetes-or-diabetes-during-dental-appointment" target="_blank" rel="noopener" class="read-more">Please click here to read more</a>
+    </article>
+
+    <article class="article">
+      <h3>Working night shifts makes it harder to manage type 2 diabetes</h3>
+      <p>Research led by King's College London shows that working night shifts can make it harder for people with type 2 diabetes to manage their condition, highlighting the need for tailored clinical and workplace support.</p>
+      <a href="https://www.kcl.ac.uk/news/working-night-shifts-makes-it-harder-to-manage-type-2-diabetes" target="_blank" rel="noopener" class="read-more">Please click here to read more</a>
+    </article>
+
+    <article class="article">
+      <h3>Nutrition and lifestyle resources</h3>
+      <p>Resources from Shireen Kassam, Consultant Haematologist and Honorary Senior Lecturer at <a href="https://www.kch.nhs.uk" target="_blank" rel="noopener">King's College Hospital NHS FT</a>, are available on whole food plant-based diets, supporting evidence-based approaches to nutrition and metabolic health.</p>
+      <ul class="resource-links" aria-label="Nutrition resource links">
+        <li><a href="https://plantbasedhealthprofessionals.com" target="_blank" rel="noopener">Plant-Based Health Professionals UK</a></li>
+        <li><a href="https://kingsweb.kcl.ac.uk" target="_blank" rel="noopener">Kingsweb – Veganuary 2026 events and information pack</a></li>
+      </ul>
+    </article>
+
+    <!-- EVENTS -->
+    <div class="section-header" id="events">
+      <span class="section-label">Events</span>
+      <h2>Upcoming Training &amp; Events</h2>
+    </div>
+
+    <article class="article">
+      <h3>Equity in Diabetes &amp; Pregnancy Event — Thursday 30 April 2026</h3>
+      <p>A recent event hosted by <a href="https://www.linkedin.com/posts/diabetes-africa_dukpc26-activity-7452679763904704512-oG88?utm_source=" target="_blank" rel="noopener">Diabetes Africa</a> brought together healthcare professionals, community leaders and people with lived experience to explore how diabetes care can become more equitable, culturally responsive and community centred.</p>
+      <p>Discussions focused on improving pregnancy preparation and outcomes for women living with diabetes, particularly Black and Asian women who continue to face significant inequalities. Speakers highlighted the importance of ongoing support before, during and after pregnancy, noting that 1 in 2 women with gestational diabetes will go on to develop type 2 diabetes.</p>
+      <p>Lived experience shared during the day reinforced gaps in postnatal follow-up and the need for more joined-up, multidisciplinary care. Attendees also emphasised that "every contact counts", with a role for professionals across primary care, maternity and pharmacy services.</p>
+      <p>The importance of cultural humility was a key theme, recognising the diversity within communities and the need for tailored, meaningful conversations. The event closed with a clear call for continued collaboration, education and community partnership to drive more equitable care.</p>
+      <a href="https://www.linkedin.com/posts/diabetes-africa_dukpc26-activity-7452679763904704512-oG88?utm_source=" target="_blank" rel="noopener" class="read-more">Follow Diabetes Africa on LinkedIn for more</a>
+    </article>
+
+    <div class="event-card" role="region" aria-label="Beyond the Prescription event details">
+      <h4>Beyond the Prescription: MDT Care in Weight-Loss Medications 2026</h4>
+      <p><a href="https://www.guysandstthomas.nhs.uk" target="_blank" rel="noopener" style="color:var(--khp-gold);">Guy's &amp; St Thomas' NHS Foundation Trust</a> is hosting a comprehensive training day covering obesity, GLP-1 care, psychology, stigma, nutrition, and compassionate weight-loss support. Aimed at dietitians, physiotherapists, clinical psychologists, nurses, pharmacists, GPs and more.</p>
+      <div class="event-meta">
+        <div><span class="event-meta-label">Date</span><span class="event-meta-value">10 July 2026</span></div>
+        <div><span class="event-meta-label">Time</span><span class="event-meta-value">08:45–16:15</span></div>
+        <div><span class="event-meta-label">Venue</span><span class="event-meta-value">Central Hall, St Thomas' Hospital, London SE1 7EH</span></div>
+        <div><span class="event-meta-label">Format</span><span class="event-meta-value">In person</span></div>
+      </div>
+      <a href="https://www.guysandstthomas.nhs.uk/education-and-training" target="_blank" rel="noopener">Visit Guy's &amp; St Thomas' Education and Training to book your place →</a>
+    </div>
+
+    <div class="event-card" role="region" aria-label="KHP Diabetes Technology Workshop event details" style="margin-top:1.25rem;">
+      <h4>King's Health Partners Diabetes Technology Foundation Educational Workshop</h4>
+      <p>This free, interactive one-day event is aimed at healthcare professionals involved in diabetes care and education. It focuses on hands-on learning with insulin pumps and glucose monitoring technologies.</p>
+      <div class="event-meta">
+        <div><span class="event-meta-label">Date</span><span class="event-meta-value">Monday 6 July 2026</span></div>
+        <div><span class="event-meta-label">Time</span><span class="event-meta-value">08:30–17:00</span></div>
+        <div><span class="event-meta-label">Cost</span><span class="event-meta-value">Free</span></div>
+        <div><span class="event-meta-label">Format</span><span class="event-meta-value">In person — interactive, hands-on</span></div>
+        <div><span class="event-meta-label">Audience</span><span class="event-meta-value">Healthcare professionals in diabetes care and education</span></div>
+      </div>
+      <a href="https://www.tickettailor.com/events/khpdeo/1900033" target="_blank" rel="noopener">Register here — select your tickets →</a>
+    </div>
+
+    <!-- YEAR IN REVIEW -->
+    <div class="section-header" id="yearreview">
+      <span class="section-label">Year Review</span>
+      <h2>DEO's Year-End Impact</h2>
+    </div>
+
+    <p style="font-size:0.91rem;color:var(--khp-slate);margin-bottom:1rem;line-height:1.8;">This year has seen progress across research, education, clinical transformation and partnerships. Below is a summary of some of our achievements, reflecting the dedication and collaboration of our teams.</p>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <h4>Research &amp; Innovation</h4>
+        <ul>
+          <li>Eight research webinars (~30–50 attendees each)</li>
+          <li>1,000+ attendees at the KHP Lancet Commission launch</li>
+          <li>Inclusive research tools co-designed with Mabadiliko</li>
+          <li>H2O diabetes meta-tool project extended with involvement from DHI Scotland to scope a UK observatory for PROMs</li>
+          <li>ADA President's Select abstract nomination</li>
+        </ul>
+      </div>
+      <div class="review-card">
+        <h4>Clinical &amp; Workforce</h4>
+        <ul>
+          <li>South East London Obesity Pathway Review completed</li>
+          <li>Tirzepatide rollout across primary care</li>
+          <li>70 unassigned young people brought into specialist care</li>
+          <li>YES programme co-designed with Diabetes UK</li>
+          <li>South London Young Adults Network expanded pan-London</li>
+        </ul>
+      </div>
+      <div class="review-card">
+        <h4>Education</h4>
+        <ul>
+          <li>76 colleagues at the Diabetes Tech event</li>
+          <li>New CPD module with Guy's Learning Lab</li>
+          <li>Annual Diabetes Africa UK Forum supported</li>
+          <li>DEO Academy business plan completed</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:2rem;">
+      <strong>Contribute to our next edition:</strong> If you have a publication, update, or event to share with the KHP DEO community, please contact us at <a href="mailto:DEO@kcl.ac.uk"><strong>DEO@kcl.ac.uk</strong></a>.
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Newsletter footer">
+    <p class="footer-tagline">Working together to improve the health of people living with diabetes, endocrine disorders, and obesity.</p>
+    <nav class="footer-links" aria-label="Social media links">
+      <a href="https://x.com/KHPDEO" target="_blank" rel="noopener">X (Twitter)</a>
+      <a href="https://www.linkedin.com/company/khp-diabetes-endocrinology-and-obesity/?viewAsMember=true" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+    <p class="footer-contact">Questions or contributions: <a href="mailto:DEO@kcl.ac.uk">DEO@kcl.ac.uk</a></p>
+  </footer>
+
+</div>
+
+<script>
+  (function() {
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', 'newsletter_view', {
+          event_category: 'engagement',
+          event_label: 'KHP DEO Newsletter'
+        });
+      }
+    } catch(e) {}
+  })();
+</script>
+
+</body>
+</html>
